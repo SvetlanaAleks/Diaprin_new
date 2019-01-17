@@ -108,6 +108,7 @@ a
 
 
 
+
 .arr
 	transition: all .5s
 	cursor: pointer
@@ -118,28 +119,35 @@ a
 	.fico
 		color: #244289
 		font-size: 29px
-	&:hover, &:focus
+	&:hover
 		.fico
-			color: #a8bdd2
+			color: #81a413
 	&--left
 		.fico
 			transform: rotate(180deg)
+.slick-disabled
+	.fico
+		color: #a8bdd2
 .slick-dots
 	display: flex
 	justify-content: center
 	align-items: center
-	li
-		cursor: pointer
-		height: 24px
-		width: 24px
-		border-radius: 50%
-		background-color: #a8bdd2
-		margin: 5px
-		border: 5px solid white
 	.slick-active
 		width: 25px
 		height: 25px
+		border: 5px solid white
 		box-shadow: 0 0 15px 0 rgba(36, 66, 137, 0.1)
 		background-color: #82a312
+		&:hover
+			background-color: #82a312
+	li
+		cursor: pointer
+		height: 12px
+		width: 12px
+		border-radius: 50%
+		background-color: #a8bdd2
+		margin: 0 5px
+		&:hover
+			background-color: #244289
 	button
 		display: none

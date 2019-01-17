@@ -2,7 +2,7 @@
 //=require ../../node_modules/slick-carousel/slick/slick.min.js
 //=require partials/app.js
 $(document).ready(function () {
-   App.init();
+    App.init();
 
 
     $('.review__content').slick({
@@ -37,8 +37,13 @@ $(document).ready(function () {
         this.parentNode.classList.toggle('active');
     });
 
-    $('.review__content').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    $('.review__content').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
         $('.review__item-wrap').removeClass('active');
     });
+
+    $('.comment__text').mCustomScrollbar({
+        axis: 'y'
+    });
 });
+
 

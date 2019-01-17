@@ -1,7 +1,6 @@
 .graph
 	padding-top: 79px
 	padding-bottom: 81px
-	background-image: linear-gradient(to left, #bfd0e2, #f6f7f9 50%, #bfd0e2)
 	z-index: 0
 	position: relative
 	.font-bold
@@ -27,24 +26,40 @@
 		border-top: 1px solid #d2d9e9
 		max-width: 1110px
 		margin: auto
+		position: relative
+		background: url('../img/graph.png') no-repeat 69px 93px
+		background-size: 982px
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			height: 6px
+			width: 1030px
+			left: 50%
+			transform: translateX(-50%)
+			background-image: linear-gradient(to left, #81a413, #adc700 20%, #d8ce2c 39%, #ffb80d 60%, #ff8a0d 81%, #f54c4c)
+			bottom: 89px
 		.col
-			width: 165px
+			width: 142px
 			text-align: center
 			display: flex
 			flex-direction: column
 			align-items: center
+			justify-content: flex-end
 			flex-shrink: 0
-			// position: relative
-			// &::after
-			// 	content: ''
-			// 	display: block
-			// 	position: absolute
-			// 	top: 0
-			// 	bottom: -80px
-			// 	width: 1px
-			// 	background: #d2d9e9
-			// 	left: 50%
-			// 	transform: translateX(-50%)
+			height: 462px
+			position: relative
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				top: 0
+				bottom: 90px
+				width: 1px
+				background: #d2d9e9
+				left: 50%
+				transform: translateX(-50%)
+				z-index: -2
 			&:last-of-type
 				width: 120px
 			&__text
@@ -84,13 +99,13 @@
 					margin-bottom: 80px
 					color: #f54c4c
 				&--2
-					margin-bottom: 106px
+					margin-bottom: 108px
 					color: #ff620d
 				&--3
-					margin-bottom: 146px
+					margin-bottom: 149px
 					color: #ff8a0d
 				&--4
-					margin-bottom: 188px
+					margin-bottom: 190px
 					color: #ffb80d
 				&--5
 					margin-bottom: 241px
@@ -99,5 +114,14 @@
 					margin-bottom: 280px
 					color: #adc700
 				&--7
-					margin-bottom: 322px
+					margin-bottom: 329px
 					color: #81a413
+	&__btn
+		max-width: 280px
+		left: 50%
+		transform: translate(-50%, 50%)
+		position: absolute
+		small
+			display: block
+			font-size: 20px
+			font-weight: 500
