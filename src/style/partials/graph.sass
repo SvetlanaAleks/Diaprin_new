@@ -6,19 +6,52 @@
 	.font-bold
 		font-weight: 500
 		color: #222222
+	.nowrap
+		white-space: nowrap
 	&__title
 		margin-bottom: 23px
+		+r(1199)
+			margin-bottom: 15px
+		+r(1023)
+			margin-bottom: 10px
+		+r(479)
+			br
+				display: none
 	&__desc
 		text-align: center
 		font-size: 22px
 		line-height: 1.27
 		color: #444444
 		margin-bottom: 39px
+		+r(1199)
+			margin-bottom: 28px
+			font-size: 21px
+		+r(1023)
+			font-size: 18px
+			margin-bottom: 20px
+			br
+				display: none
+		+r(767)
+			font-size: 16px
+			margin-bottom: 13px
+		+r(639)
+			font-size: 15px
+			margin-bottom: 10px
+		+r(479)
+			font-size: 14px
 	&__ttl
 		font-size: 30px
 		text-align: center
 		font-weight: 700
 		margin-bottom: 25px
+		+r(1023)
+			font-size: 27px
+			margin-bottom: 15px
+		+r(767)
+			font-size: 23px
+		+r(639)
+			font-size: 22px
+			margin-bottom: 10px
 	&__content
 		display: flex
 		justify-content: space-between
@@ -27,8 +60,8 @@
 		max-width: 1110px
 		margin: auto
 		position: relative
-		background: url('../img/graph.png') no-repeat 69px 93px
-		background-size: 982px
+		background: url('../img/graph.png') no-repeat 64px 93px
+		background-size: 987px
 		&::before
 			content: ''
 			display: block
@@ -39,8 +72,32 @@
 			transform: translateX(-50%)
 			background-image: linear-gradient(to left, #81a413, #adc700 20%, #d8ce2c 39%, #ffb80d 60%, #ff8a0d 81%, #f54c4c)
 			bottom: 89px
+		+r(1199)
+			background: url(../img/graph.png) 65px 95px no-repeat
+			background-size: 87.6%
+			&::before
+				width: 940px
+		+r(1023)
+			background: url(../img/graph.png) 53px 79px no-repeat
+			background-size: 84.8%
+			margin-bottom: 18px
+			&::before
+				width: 750px
+				bottom: 75px
+		+r(767)
+			background: none
+			display: flex
+			flex-wrap: wrap
+			border-top: none
+			align-items: baseline
+			justify-content: space-around
+			margin-bottom: 30px
+			&::before
+				display: none
+		+r(639)
+			margin-bottom: 20px
 		.col
-			width: 142px
+			max-width: 142px
 			text-align: center
 			display: flex
 			flex-direction: column
@@ -58,15 +115,36 @@
 				width: 1px
 				background: #d2d9e9
 				left: 50%
-				transform: translateX(-50%)
+				transform: translateX(50%)
 				z-index: -2
 			&:last-of-type
 				width: 120px
+			+r(1199)
+				height: 438px
+			+r(1023)
+				width: auto
+				height: 340px
+				flex-shrink: 0
+				&::after
+					bottom: 79px
+			+r(767)
+				height: auto
+				width: 135px
+				align-content: center
+				&:nth-of-type(-n+4)
+					margin-bottom: 20px
+			+r(639)
+				&:nth-of-type(-n+6)
+					margin-bottom: 15px
 			&__text
 				font-size: 18px
 				line-height: 1
 				color: #333333
 				min-height: 64px
+				+r(1023)
+					font-size: 15px
+				+r(767)
+					min-height: auto
 			&__check
 				background: white
 				border-radius: 50%
@@ -79,6 +157,7 @@
 				font-size: 32px
 				font-weight: 900
 				position: relative
+				flex-shrink: 0
 				&::before
 					content: ''
 					display: block
@@ -91,6 +170,15 @@
 					border-top: 47px solid #97a5c5
 					border-radius: 24px
 					z-index: -1
+				+r(1023)
+					width: 60px
+					height: 60px
+					font-size: 23px
+					&::before
+						bottom: -59px
+						left: -7px
+						border: 33px solid transparent
+						border-top: 47px solid #97a5c5
 				small
 					display: block
 					font-size: 14px
@@ -98,30 +186,69 @@
 				&--1
 					margin-bottom: 80px
 					color: #f54c4c
+					+r(1023)
+						margin-bottom: 59px
 				&--2
-					margin-bottom: 108px
+					margin-bottom: 112px
 					color: #ff620d
+					+r(1199)
+						margin-bottom: 110px
+					+r(1023)
+						margin-bottom: 82px
 				&--3
-					margin-bottom: 149px
+					margin-bottom: 154px
 					color: #ff8a0d
+					+r(1199)
+						margin-bottom: 148px
+					+r(1023)
+						margin-bottom: 110px
 				&--4
-					margin-bottom: 190px
+					margin-bottom: 196px
 					color: #ffb80d
+					+r(1199)
+						margin-bottom: 186px
+					+r(1023)
+						margin-bottom: 136px
 				&--5
-					margin-bottom: 241px
+					margin-bottom: 244px
 					color: #d8ce2c
+					+r(1199)
+						margin-bottom: 228px
+					+r(1023)
+						margin-bottom: 165px
 				&--6
 					margin-bottom: 280px
 					color: #adc700
+					+r(1199)
+						margin-bottom: 258px
+					+r(1023)
+						margin-bottom: 185px
 				&--7
 					margin-bottom: 329px
 					color: #81a413
+					+r(1199)
+						margin-bottom: 302px
+					+r(1023)
+						margin-bottom: 217px
+				+r(767)
+					margin-bottom: 28px
 	&__btn
 		max-width: 280px
 		left: 50%
 		transform: translate(-50%, 50%)
 		position: absolute
+		+r(1199)
+			transform: translate(-50%, 33%)
+		+r(1023)
+			position: static
+			margin: auto
+			transform: none
+		+r(767)
+			font-size: 23px
+			width: 250px
 		small
 			display: block
 			font-size: 20px
 			font-weight: 500
+			+r(767)
+				font-size: 18px
