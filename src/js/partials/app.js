@@ -12,6 +12,7 @@ const App = (function () {
             prevArrow: '<div class="arr arr--left"><i class="fico fico-arrow"></i></div>',
             nextArrow: '<div class="arr arr--right"><i class="fico fico-arrow"></i></div>',
             autoplay: false
+
          });
       },
       init: function () {

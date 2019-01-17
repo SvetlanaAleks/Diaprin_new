@@ -221,6 +221,7 @@
   }
 }
 .btn {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -246,7 +247,8 @@
     line-height: 21px;
   }
   &:hover {
-    box-shadow: none;
+    background-image: linear-gradient(to right, #fd4f32 0%, #fb7d5c 51%, #fd4f32 100%);
+    border-bottom-color: #e44824;
   }
   &:active {
     border-bottom: none;
