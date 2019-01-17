@@ -11,7 +11,23 @@ const App = (function () {
             cssEase: "linear",
             prevArrow: '<div class="arr arr--left"><i class="fico fico-arrow"></i></div>',
             nextArrow: '<div class="arr arr--right"><i class="fico fico-arrow"></i></div>',
-            autoplay: false
+            autoplay: false,
+            responsive: [{
+                  breakpoint: 1024,
+                  settings: {
+                     slidesToShow: 2,
+                     slidesToScroll: 1
+                  }
+               },
+               {
+                  breakpoint: 640,
+                  settings: {
+                     slidesToShow: 1,
+                     slidesToScroll: 1,
+                     dots: false
+                  }
+               }
+            ]
          });
       },
       showTabs: function () {
