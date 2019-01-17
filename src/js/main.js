@@ -4,3 +4,7 @@
 $(document).ready(function () {
    App.init();
 });
+
+$('.comment__text').mCustomScrollbar({
+   axis: 'y'
+});

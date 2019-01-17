@@ -1,0 +1,182 @@
+.doctor
+	padding-top: 80px
+	padding-bottom: 90px
+	.font-bold
+		font-weight: 500
+		color: #000
+	&__title
+		margin-bottom: 44px
+	.name-wrap
+		display: flex
+		justify-content: center
+		margin-bottom: 48px
+		+r(1199)
+			margin-bottom: 35px
+		+r(639)
+			margin-bottom: 20px
+		+r(479)
+			display: block
+		.name
+			max-width: 390px
+			width: 100%
+			border-radius: 29px
+			border: 2px solid #c7e0e3
+			padding: 16px 15px
+			font-size: 22px
+			color: #666666
+			text-align: right
+			cursor: pointer
+			background: white
+			+unselectable
+			+nlt
+				margin-right: 38px
+				+r(479)
+					margin-right: 0
+					margin: auto
+					margin-bottom: 10px
+			+r(1023)
+				font-size: 20px
+				max-width: 370px
+			+r(767)
+				font-size: 18px
+			+r(639)
+				font-size: 16px
+			+r(479)
+				margin: auto
+			.icon-1
+				margin-right: 75px
+				position: relative
+				+r(1199)
+					margin-right: 65px
+				+r(767)
+					margin-right: 0
+					text-align: center
+				+r(639)
+					margin-right: 15px
+					text-align: right
+				+r(479)
+					text-align: center
+				&::after
+					content: ''
+					display: block
+					position: absolute
+					left: 77px
+					top: 50%
+					transform: translateY(-50%)
+					+sprite($flag-1-bl)
+					+r(767)
+						left: 0
+			.icon-2
+				margin-right: 57px
+				position: relative
+				&::after
+					content: ''
+					display: block
+					position: absolute
+					left: 64px
+					top: 50%
+					transform: translateY(-50%)
+					+sprite($flag-2-bl)
+					+r(767)
+						left: 0
+				+r(1199)
+					margin-right: 52px
+				+r(767)
+					margin-right: 40px
+				+r(639)
+					margin-right: 0
+					text-align: right
+				+r(479)
+					text-align: center
+			&--active
+				color: black
+				font-weight: 600
+				border: 2px solid #82a312
+				position: relative
+				+r(479)
+					&::after, &::before
+						display: none
+				.icon-1
+					&::after
+						+sprite($flag-1)
+				.icon-2
+					&::after
+						+sprite($flag-2)
+				&::after
+					content: ''
+					position: absolute
+					left: 50%
+					transform: translateX(-50%)
+					bottom: -10px
+					width: 0
+					height: 0
+					border-style: solid
+					border-width: 12px 14.5px 0 14.5px
+					border-color: #ffffff transparent transparent transparent
+				&::before
+					content: ''
+					position: absolute
+					left: 50%
+					transform: translateX(-50%)
+					bottom: -12px
+					width: 0
+					height: 0
+					border-style: solid
+					border-width: 12px 14.5px 0 14.5px
+					border-color: #82a312 transparent transparent transparent
+	.comment
+		display: none
+		&--active
+			display: flex
+			align-items: flex-start
+		&__photo
+			border-radius: 10px
+			border: 10px solid white
+			box-shadow: 0 0 15px 0 rgba(36, 66, 137, 0.1)
+			margin-right: 30px
+		&__text
+			max-height: 315px
+		.text
+			font-size: 18px
+			line-height: 1.67
+			color: #333333
+			+nlt
+				margin-bottom: 27px
+		&__sign
+			padding-top: 28px
+			margin-top: 15px
+			padding-bottom: 70px
+			position: relative
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				top: 0
+				left: 0
+				height: 1px
+				width: 480px
+				background-color: #bed0e2
+			&--1
+				padding-bottom: 80px
+				&::after
+					content: ''
+					display: block
+					position: absolute
+					bottom: 0
+					+sprite($sign-2)
+			&--2
+				&::after
+					content: ''
+					display: block
+					position: absolute
+					bottom: 0
+					+sprite($sign-1)
+			.name
+				font-size: 24px
+				font-weight: 500
+				margin-bottom: 13px
+				display: block
+			.post
+				font-size: 18px
+				font-style: italic
+				color: #444444

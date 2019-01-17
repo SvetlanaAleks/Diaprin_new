@@ -14,8 +14,22 @@ const App = (function () {
             autoplay: false
          });
       },
+      showTabs: function () {
+         const tabs = $('.js-tabs');
+         const comment = $('.comment');
+         tabs.click(function (e) {
+            const _this = $(this);
+            tabs.removeClass('name--active');
+            _this.addClass('name--active');
+            const href = _this.data('target');
+            const target = $(href);
+            comment.removeClass('comment--active');
+            target.addClass('comment--active');
+         });
+      },
       init: function () {
          App.sliderProblemInit();
+         App.showTabs();
       }
    };
 })();
