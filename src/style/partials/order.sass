@@ -1,0 +1,59 @@
+.order
+	padding-top: 91px
+	padding-bottom: 85px
+	&__title
+		margin-bottom: 55px
+	&__content
+		display: flex
+		justify-content: space-between
+		margin-bottom: 45px
+		counter-reset: section
+	.item
+		max-width: 370px
+		width: 100%
+		text-align: center
+		position: relative
+		&::before
+			counter-increment: section
+			content: counter(section)
+			position: absolute
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 54px
+			height: 54px
+			background-color: #81a413
+			font-size: 30px
+			font-weight: 700
+			color: white
+			box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05)
+			border: 6px solid white
+			right: 91px
+			top: -15px
+			border-radius: 50%
+		&__photo
+			max-width: 100%
+			width: 230px
+			height: 230px
+			border-radius: 50%
+			border: 6px solid #97a5c5
+			box-shadow: 0 0 0 15px #eff2f8
+			margin-bottom: 33px
+		&__ttl
+			font-size: 22px
+			font-weight: 500
+			line-height: 1.18
+			color: #222222
+			margin-bottom: 10px
+		&__text
+			font-size: 18px
+			line-height: 1.33
+			color: #444444
+	&__result
+		text-align: center
+		font-size: 22px
+		font-weight: 500
+		line-height: 1.27
+		color: #444444
+	.dash
+		margin-bottom: 45px
