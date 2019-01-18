@@ -1,8 +1,8 @@
 // desctop
 .footer {
-  padding-top: 170px;
+  padding-top: 100px;
   padding-bottom: 30px;
-  color: #696f92;
+  color: #666666;
   font-size: 18px;
   position: relative;
 }
@@ -28,9 +28,9 @@
 
 .footer__privacy {
   display: block;
-  color: #696f92;
+  color: #666666;
   margin-bottom: 5px;
-
+  text-decoration: none;
   &:hover {
     text-decoration: underline;
   }
@@ -63,7 +63,7 @@
 // media
 @media screen and (max-width: 1190px) {
   .footer {
-    padding-top: 100px;
+    padding-top: 80px;
   }
 
 }

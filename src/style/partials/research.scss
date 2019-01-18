@@ -1,6 +1,6 @@
 .research {
   padding-top: 84px;
-  padding-bottom: 70px;
+  padding-bottom: 90px;
   &__subtitle {
     color: #333333;
     font-size: 22px;
@@ -164,7 +164,7 @@
         width: 100%;
         left: 0;
         top: 0;
-        height: 235px;
+        height: calc(100% - 26px);
         background-color: #a8bdd2;
       }
     }
@@ -193,12 +193,19 @@
 
 @media screen and (max-width: 1199px) {
   .research {
-
+    &__subtitle {
+      margin-top: 5px;
+    }
+    &__line {
+      margin-top: 20px;
+    }
     &__heading {
+      margin-top: 20px;
       font-size: 22px;
     }
 
     &-content {
+      margin-top: 30px;
       &_box {
 
         &__head {
@@ -214,6 +221,11 @@
     }
 
   }
+  .research-content_box:nth-child(2):after{
+    left: 0;
+  } .research-content_box:nth-child(2):before {
+        right: 0;
+  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -221,7 +233,6 @@
 
     &__heading {
       font-size: 20px;
-      margin-top: 45px;
 
       &:before {
         width: 625px;
@@ -231,7 +242,6 @@
     }
 
     &-content {
-      margin-top: 45px;
 
       &_box {
 
@@ -245,7 +255,9 @@
 
       }
     }
-
+    &__sert-item {
+      margin-right: 25px;
+    }
 
   }
 }
@@ -330,7 +342,9 @@
       width: 230px;
       align-items: flex-start;
     }
-
+    &__sert-img {
+      width: 145px;
+    }
   }
 }
 
@@ -339,6 +353,22 @@
     &__heading {
       br {
         display: none;
+      }
+    }
+    &__sert {
+      justify-content: space-around;
+      &::before {
+        display: none;
+      }
+      &-item {
+        margin-right: 0;
+        &::before {
+          display: none;
+        }
+      }
+      &-img {
+        width: 130px;
+        margin: 0;
       }
     }
   }
@@ -357,5 +387,27 @@
   .research-content_box__twobox {
     margin-left: 0;
     align-items: center;
+  }
+  .research {
+    &__btn {
+      margin-top: 20px;
+    }
+    &__title {
+      & br,
+      & br::after {
+        content: ' ';
+      }
+    }
+    &__sert {
+      margin-top: 0;
+      flex-direction: column;
+      align-items: center;
+      &-item {
+        margin-top: 20px;
+      }
+      &-img {
+        width: 170px;
+      }
+    }
   }
 }
