@@ -116,7 +116,7 @@
 }
 
 .audiojs .play-pause {
-  border: none!important
+  border: none !important
 }
 
 .loaded,
@@ -128,21 +128,21 @@
 
 .scrubber {
   position: absolute;
-  bottom: -33px!important;
+  bottom: -33px !important;
   width: 100%;
-  background-color: #d4eef5!important;
-  height: 2px!important;
-  margin: 10px 0 0!important
+  background-color: #d4eef5 !important;
+  height: 2px !important;
+  margin: 10px 0 0 !important
 }
 
 .audiojs .scrubber {
-  border: none!important
+  border: none !important
 }
 
 .loaded,
 .progress {
   width: 100%;
-  height: 2px!important;
+  height: 2px !important;
   background-color: #474747
 }
 
@@ -196,40 +196,49 @@
 .audio-reviews-items {
   display: flex;
 }
+
 .audio-reviews-item {
   width: 370px;
   margin: 0;
   border: none;
   margin-right: 30px;
 }
+
 .audio-reviews-item:last-child {
   margin-right: 0px;
 }
+
 .audiojs {
   width: 100%;
   height: 65px;
 }
+
 .audiojs .scrubber {
   top: 19px;
   left: 31px;
   max-width: 240px;
   background: #dbe4ee !important;
 }
+
 .audiojs .loaded {
   background: #dbe4ee !important;
 }
+
 .audiojs .progress {
   background: #82a312 !important;
 }
+
 .audiojs .play-pause {
   height: 40px;
   left: 0;
   padding: 4px 0;
 }
+
 .audio-reviews-title {
   bottom: 53px;
   left: 31px;
 }
+
 .audiojs .time {
   float: right;
   padding: 12px 10px;
@@ -242,6 +251,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 .youtube {
   width: 370px;
   box-shadow: 0 0 15px rgba(36, 66, 137, 0.1);
@@ -249,9 +259,11 @@
   background-color: #ffffff;
   border: 10px solid #Fff;
 }
+
 .youtube .thumb {
   border-radius: 10px;
 }
+
 iframe {
   width: 370px;
   height: 282px;
@@ -268,10 +280,28 @@ iframe {
   margin-top: 41px;
   margin-bottom: 51px;
 }
+
 .audio {
   padding-top: 84px;
   padding-bottom: 84px;
+  position: relative;
 }
+
+.audio::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 26px 25px 0 25px;
+  border-color: #f4f6f8 transparent transparent transparent;
+  z-index: 1;
+}
+
 .audio__auth {
   font-size: 22px;
   font-weight: 500;
@@ -290,96 +320,129 @@ iframe {
   .audio-reviews-items {
     padding: 0 35px;
   }
+
   .audiojs .scrubber {
     max-width: 200px;
   }
 }
+
 @media only screen and (max-width: 1199px) {
-  .youtube, iframe {
+
+  .youtube,
+  iframe {
     width: 320px;
   }
+
   iframe {
     height: 245px;
   }
+
   .audio__line {
     margin-top: 11px;
     margin-bottom: 21px;
   }
+
   .audio-reviews-items {
     margin-top: 30px;
   }
+
   .audio__auth {
     font-size: 18px;
     margin-top: 10px;
   }
+
   .audio-reviews-title {
     font-size: 18px;
   }
+
   .audiojs .scrubber {
     left: 30px;
     max-width: 170px;
   }
+
   .audiojs .time {
     padding: 15px 0;
   }
+
   .audio-reviews-title {
     bottom: 45px;
     left: 30px;
   }
 }
+
 @media only screen and (max-width: 1023px) {
-.audio__content {
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+  .audio::after {
+    display: none;
+  }
+
+  .audio__content {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
   .audio__line {
     margin-bottom: 0;
   }
+
   .audio__item {
     margin-top: 20px;
   }
+
   .audio-reviews-title,
   .audio__auth {
     font-size: 16px;
   }
+
   .audio-reviews-items {
     margin: 30px 0 11px;
   }
+
   .audio-reviews-item {
     margin: 0 5px;
   }
+
   .audiojs .scrubber {
     max-width: 100px;
   }
 }
+
 @media only screen and (max-width: 767px) {
 
   .audio-reviews-items {
     flex-direction: column;
     justify-content: center;
   }
+
   .audio-reviews-item {
     width: 300px;
     margin: 0 auto;
   }
+
   .audio-reviews-item:last-child {
     margin: 0 auto;
   }
+
   .audiojs .scrubber {
     max-width: 180px;
   }
-  .youtube, iframe {
+
+  .youtube,
+  iframe {
     width: 290px;
   }
+
   iframe {
     height: 222px;
   }
 }
 
 @media only screen and (max-width: 639px) {
-  .youtube, iframe {
+
+  .youtube,
+  iframe {
     width: 300px;
   }
+
   iframe {
     height: 222px;
   }
@@ -390,9 +453,3 @@ iframe {
     padding: 0;
   }
 }
-
-
-
-
-
-
