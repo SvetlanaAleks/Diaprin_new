@@ -1,0 +1,122 @@
+.order
+	padding-top: 91px
+	padding-bottom: 85px
+	&__title
+		margin-bottom: 55px
+		+r(1199)
+			margin-bottom: 45px
+		+r(1023)
+			margin-bottom: 35px
+	&__content
+		display: flex
+		justify-content: space-between
+		margin-bottom: 45px
+		counter-reset: section
+		+r(1199)
+			margin-bottom: 35px
+		+r(1023)
+			margin-bottom: 30px
+		+r(767)
+			margin-bottom: 25px
+			flex-wrap: wrap
+			justify-content: space-around
+		+r(639)
+			margin-bottom: 15px
+	.item
+		width: 370px
+		max-width: 100%
+		text-align: center
+		position: relative
+		&::before
+			counter-increment: section
+			content: counter(section)
+			position: absolute
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 54px
+			height: 54px
+			background-color: #81a413
+			font-size: 30px
+			font-weight: 700
+			color: white
+			box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05)
+			border: 6px solid white
+			right: 91px
+			top: -15px
+			border-radius: 50%
+		+r(1023)
+			width: 210px
+			&::before
+				right: 21px
+				top: -25px
+		+r(767)
+			+nlt
+				margin-bottom: 20px
+		+r(639)
+			width: 235px
+			+nlt
+				margin-bottom: 35px
+		&__photo
+			max-width: 100%
+			width: 230px
+			height: 230px
+			border-radius: 50%
+			border: 6px solid #97a5c5
+			box-shadow: 0 0 0 15px #eff2f8
+			margin-bottom: 33px
+			+r(1199)
+				margin-bottom: 23px
+			+r(1023)
+				width: auto
+				height: auto
+			+r(767)
+				margin-bottom: 17px
+		&__ttl
+			font-size: 22px
+			font-weight: 500
+			line-height: 1.18
+			color: #222222
+			margin-bottom: 10px
+			+r(1199)
+				margin-bottom: 6px
+			+r(1023)
+				font-size: 20px
+			+r(639)
+				font-size: 18px
+				margin-bottom: 3px
+				br
+					display: none
+		&__text
+			font-size: 18px
+			line-height: 1.33
+			color: #444444
+			+r(1023)
+				font-size: 17px
+			+r(639)
+				font-size: 16px
+				line-height: 1.2
+	&__result
+		text-align: center
+		font-size: 22px
+		font-weight: 500
+		line-height: 1.27
+		color: #444444
+		+r(1023)
+			font-size: 20px
+		+r(767)
+			font-size: 17px
+		+r(639)
+			font-size: 16px
+			br
+				display: none
+	.dash
+		margin-bottom: 45px
+		+r(1199)
+			margin-bottom: 35px
+		+r(1023)
+			margin-bottom: 30px
+		+r(767)
+			margin-bottom: 25px
+		+r(639)
+			margin-bottom: 15px
