@@ -10,6 +10,10 @@
 			margin-bottom: 25px
 		+r(1023)
 			margin-bottom: 20px
+		+r(639)
+			margin-bottom: 15px
+			br
+				display: none
 	.name-wrap
 		display: flex
 		justify-content: center
@@ -132,20 +136,37 @@
 					border-style: solid
 					border-width: 12px 14.5px 0 14.5px
 					border-color: #82a312 transparent transparent transparent
+	.comment-wrap
+		+r(639)
+			display: flex
+			flex-direction: column-reverse
 	.comment
 		display: none
 		&--active
 			display: flex
 			align-items: flex-start
+			+r(639)
+				flex-direction: column
 		&__photo
 			border-radius: 10px
 			border: 10px solid white
 			box-shadow: 0 0 15px 0 rgba(36, 66, 137, 0.1)
 			margin-right: 30px
+			max-width: 100%
 			+r(1199)
 				margin-right: 20px
 			+r(1023)
 				width: 250px
+				margin-right: 15px
+			+r(767)
+				width: 220px
+				margin-right: 10px
+			+r(639)
+				margin-right: 0
+				margin: auto
+				margin-bottom: 15px
+				height: 320px
+				width: auto
 		&__text
 			max-height: 315px
 		.text
@@ -156,8 +177,16 @@
 				margin-bottom: 27px
 				+r(1199)
 					margin-bottom: 15px
+				+r(1023)
+					margin-bottom: 9px
 			+r(1199)
 				font-size: 17px
+			+r(1023)
+				font-size: 16px
+				line-height: 1.5
+			+r(767)
+				font-size: 15px
+				line-height: 1.4
 		&__sign
 			padding-top: 28px
 			margin-top: 15px
@@ -170,10 +199,21 @@
 				top: 0
 				left: 0
 				height: 1px
-				width: 480px
+				max-width: 480px
+				width: 100%
 				background-color: #bed0e2
 			+r(1199)
 				padding-top: 23px
+			+r(1023)
+				padding-top: 15px
+			+r(639)
+				text-align: center
+				padding-top: 0
+				margin-bottom: 10px
+				margin-top: 0
+				border-bottom: 1px solid #bed0e2
+				&::before
+					display: none
 			&--1
 				padding-bottom: 80px
 				&::after
@@ -182,13 +222,29 @@
 					position: absolute
 					bottom: 0
 					+sprite($sign-2)
+				+r(1023)
+					padding-bottom: 71px
+					&::after
+						transform: scale(.8)
+				+r(639)
+					&::after
+						left: 50%
+						transform: scale(.8) translateX(-50%)
 			&--2
+				padding-bottom: 61px
 				&::after
 					content: ''
 					display: block
 					position: absolute
 					bottom: 0
 					+sprite($sign-1)
+				+r(1023)
+					&::after
+						transform: scale(.8)
+				+r(639)
+					&::after
+						left: 50%
+						transform: scale(.8) translateX(-50%)
 			.name
 				font-size: 24px
 				font-weight: 500
@@ -197,6 +253,8 @@
 				+r(1199)
 					font-size: 23px
 					margin-bottom: 8px
+				+r(1023)
+					font-size: 21px
 			.post
 				font-size: 18px
 				font-style: italic
@@ -204,3 +262,5 @@
 				+r(1199)
 					font-size: 17px
 					line-height: 1.2
+				+r(1023)
+					font-size: 15px
