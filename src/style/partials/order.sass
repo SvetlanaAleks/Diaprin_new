@@ -57,6 +57,21 @@
 			width: 235px
 			+nlt
 				margin-bottom: 35px
+		.img-wrap
+			position: relative
+			z-index: -1
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				right: -53px
+				top: 111px
+				+sprite($order-line)
+				+r(1199)
+					transform: scale(.7)
+					right: -42px
+				+r(1023)
+					display: none
 		&__photo
 			max-width: 100%
 			width: 230px
