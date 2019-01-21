@@ -103,7 +103,7 @@
       margin-top: 10px;
     }
     &--cross {
-      font-weight: 900;
+      font-weight: 700;
       font-size: 44px;
     }
   }
@@ -150,6 +150,8 @@
       content: '';
       position: absolute;
       background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center center;
     }
     &--name::before {
       width: 19px;
